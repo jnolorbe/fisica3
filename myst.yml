@@ -1,0 +1,18 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 4f857f72-259a-4524-a654-3d915db18488
+  title: FÍSICA 3
+  description: Este es un libro de texto para el curso de Física 3, diseñado para estudiantes de ingeniería con conocimientos de cálculo. Incluye teoría, problemas resueltos y propuestos de Electricidad y Magnetismo.
+  keywords:
+    - Fisica
+    - Electricidad
+    - Magnetismo
+  github: jnolorbe/fisica3
+  toc:
+    - file: intro.md
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
