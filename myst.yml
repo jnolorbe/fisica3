@@ -11,6 +11,9 @@ project:
   github: jnolorbe/fisica3
   toc:
     - file: intro.md
+    - title: Contenido temático
+      children:
+        - file: cargaelectrica.md
 site:
   template: book-theme
   # options:
