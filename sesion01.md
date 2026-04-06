@@ -56,7 +56,7 @@ Figura 3. Fuerza neta de una distribución continua de carga
 
 ## II. Problemas Resueltos 📌
 
-### Problema 2: carga en una porcion 
+### Problema 1: carga en una porcion 
 ```{admonition} Distribución continua de carga sobre un hilo
 :class: important
 Una barra de ámbar de longitud $L$ se sitúa sobre el eje $x$, desde $x=0$ hasta $x=L$. Tras ser frotada con seda, adquiere una distribución de carga no uniforme que sigue el modelo exponencial:
