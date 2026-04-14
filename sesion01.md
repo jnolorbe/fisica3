@@ -56,8 +56,8 @@ Figura 3. Fuerza neta de una distribución continua de carga
 
 ## II. Problemas Resueltos 📌
 
-### Problema 1: carga en una porcion 
-```{admonition} Distribución continua de carga sobre un hilo
+### Problema 1: Carga eléctrica en una porcion lineal 
+```{admonition} Distribución de carga lineal no uniforme
 :class: important
 Una barra de ámbar de longitud $L$ se sitúa sobre el eje $x$, desde $x=0$ hasta $x=L$. Tras ser frotada con seda, adquiere una distribución de carga no uniforme que sigue el modelo exponencial:
 
@@ -74,12 +74,15 @@ Figura 4. Distribución de carga lineal no uniforme
 
 ```{admonition} Solución
 :class: dropdown hint
-#### 1. Marco Teórico e Hipótesis Inicial
+
+**1. Planteamiento: **
+
 * **Fenómeno:** Acumulación de carga no lineal en un cuerpo aislante (ámbar).
 * **Ruta de solución:** Dado que la densidad $\lambda(x)$ no es constante, debemos integrar el diferencial de carga $dq = \lambda(x)dx$ en el intervalo solicitado $[0, L/2]$.
 * **Predicción cualitativa:** En $x=0$, $\lambda(0) = \lambda_0(e^0 - 1) = 0$. La densidad crece a medida que avanzamos hacia $L$. Por lo tanto, esperamos que la carga en la primera mitad sea significativamente menor que en la segunda mitad.
 
-#### 2. Resolución Técnica
+**2. Resolución:**
+
 1. **Planteamiento de la integral:**
 
    $Q_{parcial} = \int_{0}^{L/2} \lambda(x) dx = \int_{0}^{L/2} \lambda_0 (e^{x/L} - 1) dx$
@@ -97,15 +100,18 @@ Figura 4. Distribución de carga lineal no uniforme
 
    $Q_{parcial} \approx \lambda_0 L (1.6487 - 1.5) \approx 0.1487 \lambda_0 L$
 
-#### 3. Discusión Crítica (Semáforo)
+**3. Discusión Crítica:**
+
 * 🔴 **Rojo:** Se asume que el frotamiento con seda produce un perfil exponencial perfecto. En la realidad, factores como la rugosidad del ámbar y la humedad ambiental introducen "ruido" en la distribución.
 * 🟢 **Verde:** El resultado es consistente. En una distribución uniforme, la carga en la mitad sería $0.5 \lambda L$. Aquí es solo $\approx 0.15 \lambda_0 L$, confirmando que la carga está concentrada en el extremo distal.
 * 🔵 **Azul:** La unidad final es Coulomb ($[C/m] \cdot [m] = [C]$), lo que valida el análisis dimensional.
 
-#### 4. Análisis de Sensibilidad ("¿Y si...?")
+**4. Análisis de Sensibilidad:**
+
 * ¿Qué pasaría si calculamos la carga en la segunda mitad ($L/2$ a $L$)? El resultado sería aproximadamente $0.569 \lambda_0 L$. ¡La segunda mitad tiene casi **4 veces más carga** que la primera! Esto es crítico para evitar descargas puntuales en un solo extremo de un componente electrónico.
 
-#### 5. Transferencia y Extensión
+**5. Transferencia y Extensión:**
+
 * **Ingeniería Electrónica:** Este modelo matemático es idéntico al de la **inyección de portadores minoritarios** en la base de un transistor de unión bipolar (BJT). La eficiencia del transistor depende de qué tan rápido decae esta "densidad" de carga.
 
 ✍️ **Hazlo Tú: Desafío de Modelado de Cargas Reales**
@@ -123,7 +129,7 @@ Para cada uno de los siguientes casos, plantea la integral de carga $Q = \int \l
 ```
 ---
 
-### Problema 2: Interacción Vectorial de Cargas Puntuales
+### Problema 2: Interacción entre Cargas Puntuales
 ```{admonition} Distribución discreta de cargas
 :class: important
 Deducir la fuerza neta sobre la carga puntual $q_1 = +20 \mu C$ debido a la interacción con las cargas $q_2 = -30 \, \mu C$ y $q_3=+40 \, \mu C$. 
@@ -138,13 +144,15 @@ Figura 5. Distribución de tres cargas puntuales
 ```{admonition} Solución
 :class: dropdown hint
 
-#### 1. Marco Teórico e Hipótesis Inicial
+**1. Planteamiento:**
+
 * **Fenómeno:** Superposición de fuerzas electrostáticas en un sistema discreto.
 * **Ruta de solución:** EAplicaremos la forma vectorial de la Ley de Coulomb. Calcularemos cada vector de fuerza respecto al origen y realizaremos la suma vectorial..
 * **Predicción cualitativa:** $q_1$ (positiva) será atraída por $q_2$ (hacia el tercer cuadrante) y repelida por $q_3$ (hacia el primer cuadrante). La dirección final dependerá de cuál interacción predomine.
 
 
-#### 2. Resolución Técnica
+**2. Resolución:**
+
 1. **Definición de vectores posición y distancias:**
 
    - De $q_2$ a $q_1$: $\vec{r}_{21} = \vec{r}_1 - \vec{r}_2 = (2,2) - (-3, 1) = (5\hat{i} + 1\hat{j})$ m.  
@@ -163,20 +171,21 @@ Figura 5. Distribución de tres cargas puntuales
    - $\vec{F}_{neta} = \vec{F}_{21} + \vec{F}_{31}$
    - **$\vec{F}_{neta} \approx (-0.149\hat{i} + 0.231\hat{j})N$**
 
-#### 3. Discusión Crítica (Semáforo)
+**3. Discusión Crítica:**
 * 🔴 **Rojo:** Se asume que las cargas están fijas en el espacio. En un sistema real de partículas libres, estas fuerzas provocarían una aceleración inmediata, desarmando la configuración en milisegundos.
 * 🟢 **Verde:** El resultado muestra que la carga $q_1$ tiende a moverse hacia el segundo cuadrante, lo cual es coherente ya que la repulsión de $q_3$ en el eje $y$ es más fuerte que la atracción de $q_2$.
 * 🔵 **Azul:** Las magnitudes ($\approx 0.2$ N) son pequeñas para objetos macroscópicos, pero muy intensas para partículas atómicas.
 
-#### 4. Análisis de Sensibilidad ("¿Y si...?")
+**4. Análisis de Sensibilidad:**
 * Si la carga $q_3$ se hiciera aproximadamente 3.75 veces su valor ($+150 \, \mu\text{C}$), la atracción horizontal de $q_2$, sería contrarestado, haciendo que la fuerza neta sea practicamente vertical.
 
-#### 5. Transferencia y Extensión
+**5. Transferencia y Extensión:**
+
 * **Biomédica:** En la técnica de **Electroforesis**, se aplican fuerzas similares para separar proteínas o fragmentos de ADN en un gel. La precisión en la ubicación de los electrodos (nuestras cargas puntuales) determina la resolución del diagnóstico.
 ```
 ---
 
-### Problema 3: Fuerza de una Barra sobre carga puntual
+### Problema 3: Interacción de un hilo y carga puntual
 ```{admonition} Ley de Coulomb para distribuciones de carga continua
 :class: important
 
@@ -193,12 +202,13 @@ Figura 6. Fuerzas de una linea cargada sobre una carga puntual
 :class: dropdown hint
 :class: dropdown hint
 
-#### 1. Marco Teórico e Hipótesis Inicial
+**1. Planteamiento:**
+
 * **Fenómeno:** Interacción electrostática con una distribución lineal asimétrica.
 * **Ruta de solución:** Definimos el diferencial de carga $dq = \lambda_o(x + L/2)dx$. El vector posición desde $dq$ hacia $q_0$ es $\vec{r} = -x\hat{i} + a\hat{j}$. Plantearemos la integral vectorial y resolveremos para cada componente.
 * **Predicción cualitativa:** Como la carga aumenta hacia la derecha, habrá una fuerza de repulsión hacia la izquierda (componente $-x$) y hacia arriba (componente $+y$).
 
-#### 2. Resolución Técnica
+**2. Resolución:**
 
 1. **Elementos Vectoriales:**
    - $dq = \lambda_o(x - L/2)dx$
@@ -232,26 +242,26 @@ Figura 7. Elementos vectorial del problema
 5. **Resultado Vectorial:**
    $\vec{F} = F_x \hat{i} + F_y \hat{j}$ (con los valores evaluados anteriormente).
 
-#### 3. Discusión Crítica (Semáforo)
+**3. Discusión Crítica:**
+
 * 🔴 **Rojo:** Se ignora la polarización que $q_0$ podría inducir en la varilla si esta fuera conductora (efecto imagen).
 * 🟢 **Verde:** La componente $F_y$ resulta positiva y $F_x$ negativa, lo cual coincide con la asimetría de la carga acumulada hacia la derecha.
 * 🔵 **Azul:** Este modelo representa un cable que ha sido cargado por fricción de forma desigual, un problema común en el blindaje de equipos de **Telecomunicaciones**.
 
-#### 4. Análisis de Sensibilidad ("¿Y si...?")
+**4. Análisis de Sensibilidad:**
+
 * Si $L \to 0$ manteniendo $Q$ constante, $F_x$ debe tender a cero y $F_y$ debe recuperar la forma de la Ley de Coulomb para carga puntual. Esto valida que la asimetría es un efecto de la extensión geométrica.
 
-#### 5. Transferencia y Extensión
+**5. Transferencia y Extensión:**
+
 * **En la industría:** En procesos de pintura electrostática, una boquilla que no distribuye la carga uniformemente genera fuerzas laterales que provocan un acabado desigual.
-````
+```
 ---
 
-## 📓 Actividades para el Portafolio Digital
+## III. Actividades para el Portafolio Digital 📓 
 
-Como futuro ingeniero, tu portafolio es la evidencia de tu capacidad para modelar la realidad física con rigor. Resuelve al menos dos de los siguientes desafíos en tu **Diario de Aprendizaje** utilizando la **Estrategia de los 5 Bloques**. 
+Resuelve al menos dos de los siguientes desafíos en tu **Diario de Aprendizaje** utilizando la **Estrategia de los 5 Bloques**. 
 
-> **Instrucción de Auditoría IA:** Puedes apoyarte en herramientas de IA para el cálculo, pero tu misión principal es **auditar** el resultado. Identifica si la IA olvidó el diferencial de área ($r dr d\theta$), si confundió los límites de integración o si ignoró la naturaleza vectorial de la fuerza. **Tu nota depende de tu capacidad para corregir a la máquina.**
-
----
 ### Desafío 1: El Sensor Curvo (Distribución Lineal Polar)
 Un hilo delgado en forma de semicircunferencia de radio $R$ se ubica en los cuadrantes I y II del plano $xy$. La densidad de carga no es uniforme y depende de la posición angular $\theta$ según el modelo:
 $$\lambda(\theta) = \lambda_0 \sin(\theta)$$
