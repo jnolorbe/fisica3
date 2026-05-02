@@ -16,6 +16,7 @@ project:
         - file: sesion01.md
         - file: sesion02.md
         - file: sesion03.md
+        - file: sesion04.md
 site:
   template: book-theme
   # options:

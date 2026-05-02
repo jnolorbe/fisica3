@@ -1,4 +1,4 @@
-# Sesión 3: Flujo Eléctrico
+# Sesión 3: Ley de Gauss
 ---
 
 ## I. Resumen Teórico 📚
